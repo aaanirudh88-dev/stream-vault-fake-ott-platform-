@@ -1,1 +1,45 @@
+<svg width="420" height="140" viewBox="0 0 420 140" xmlns="http://www.w3.org/2000/svg">
 
+  <defs>
+    <linearGradient id="svGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A00"/>
+      <stop offset="100%" stop-color="#FF3D2E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- SV Mark -->
+  <path d="
+    M40 50
+    C40 20, 90 15, 125 30
+    C145 38, 145 60, 120 65
+    L80 72
+    C55 76, 55 95, 85 98
+    C110 101, 140 92, 160 70
+    L215 10
+    C225 0, 240 0, 250 10
+    C260 20, 260 35, 250 45
+    L190 112
+    C165 140, 130 140, 95 132
+    C50 122, 25 92, 40 50
+    Z"
+    fill="url(#svGradient)"
+  />
+
+  <!-- Brand Name -->
+  <text x="285" y="70"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="28"
+        font-weight="700"
+        fill="#FF5A1F">
+    Stream
+  </text>
+
+  <text x="285" y="102"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="28"
+        font-weight="700"
+        fill="#FF7A00">
+    Vault
+  </text>
+
+</svg>
