@@ -196,7 +196,7 @@
     }
     .text{
         height:6vh;
-        width:100vw;
+        width:70vw;
         font-size:2.5vh;
         margin-top:1.5rem;
     }
@@ -232,12 +232,11 @@
 }
 
 .watch{
-    width:8rem;
+    width:10rem !important;
     height:3.2rem;
     font-size:1.2rem;
-    right:6%;
+    right:10% !important;
     bottom:6%;
-    left:auto;
     top:auto;
     margin:0;
 }
