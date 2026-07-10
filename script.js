@@ -59,8 +59,13 @@ let autoSlide = setInterval(() => {
     if(currentMovie >= movies.length){
         currentMovie = 0;
     }
+window.addEventListener("load", () => {
     updateHero();
-},5000);
+
+    setInterval(() => {
+        nextHero();
+    }, 5000);
+});
 
 const bollywood = movies.filter(
     movie => movie.genre.includes( "Bollywood")
