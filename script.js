@@ -4,13 +4,36 @@ const leftBtn = document.querySelector(".left");
 
 
 let currentMovie = 0 ;
-function updateHero(){
-    
-document.getElementById("hero-img").src=movies[currentMovie].image;
+
+let loadedImages = 0;
+
+movies.forEach(movie => {
+
+    const img = new Image();
+
+    img.src = movie.image;
+
+    img.onload = () => {
+
+        loadedImages++;
+
+        if (loadedImages === movies.length) {
+
+            updateHero();
+
+            startAutoSlide();
+
+        }
+
+    };
+
+});
 
 
 
-};
+
+
+
 document
 .querySelector(".right")
 .addEventListener("click",()=>{
@@ -54,18 +77,23 @@ function updateHero(){
     },350);
 }
 
-let autoSlide = setInterval(() => {
-    currentMovie++;
-    if(currentMovie >= movies.length){
-        currentMovie = 0;
-    }
-window.addEventListener("load", () => {
-    updateHero();
+let autoSlide;
 
-    setInterval(() => {
-        nextHero();
-    }, 5000);
-});
+function startAutoSlide(){
+
+    autoSlide = setInterval(() => {
+
+        currentMovie++;
+
+        if(currentMovie >= movies.length){
+            currentMovie = 0;
+        }
+
+        updateHero();
+
+    },5000);
+
+}
 
 const bollywood = movies.filter(
     movie => movie.genre.includes( "Bollywood")
@@ -249,4 +277,4 @@ watchBtn.addEventListener("click", () =>{
     window.location.href = "watch.html";
 
 });
-updateHero();
+
