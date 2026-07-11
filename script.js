@@ -249,10 +249,7 @@ drama.forEach(
                 <img src="${movie.image}">
                 <h3 class="title">${movie.title}</h3>
             </div>
-            
-    
-        
-        `;
+            `;
     
 
         })
